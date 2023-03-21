@@ -11,6 +11,7 @@ const $aside = d.querySelector(".aside");
 const $section_notices = $aside.parentElement.nextElementSibling; 
 //Toggle-Bar
 const $btn_bar = $nav.parentElement.children[1];
+const $img_home = d.querySelector(".img-home");
 
 document.addEventListener("DOMContentLoaded" , ()=> {
     detectSize()
@@ -19,13 +20,10 @@ document.addEventListener("DOMContentLoaded" , ()=> {
 //cambia la imagen segun el tamaño del screenX 
 function detectSize () {
     
-    const $img_home = d.querySelector(".img-home");
-        if(window.screenX < 400) {
-            $img_home.src = "./assets/images/image-web-3-desktop.jpg";
-        }else {
-            $img_home.src = "./assets/images/image-web-3-mobile.jpg";
-        
-        }
+    $img_home.src = "./assets/images/image-web-3-mobile.jpg";
+    if(window.screenX < 600) {
+        $img_home.src = "./assets/images/image-web-3-desktop.jpg";
+    }   
 }
 
 //inserccion del navegador con algunos estilos CSS
@@ -69,6 +67,23 @@ navigation();
 
 //Main - Aside
 
+window.addEventListener("resize", detectSize)
+
+document.addEventListener("click",(e) => {
+
+    if(e.target.matches("a")) {
+       $nav.classList.remove("active")
+       $btn_bar.src = "./assets/images/icon-menu.svg"  
+    }
+})
+
+
+window.addEventListener("scroll",() => {
+    if(scrollY > 0 ) {
+        $nav.classList.remove("active")
+        $btn_bar.src = "./assets/images/icon-menu.svg"  
+    }
+})
 
 info.forEach( e => {
     
@@ -138,24 +153,5 @@ info.forEach( e => {
     getNotice();
 
 })
-
-window.addEventListener("resize", detectSize)
-
-document.addEventListener("click",(e) => {
-
-    if(e.target.matches("a")) {
-       $nav.classList.remove("active")
-       $btn_bar.src = "./assets/images/icon-menu.svg"  
-    }
-})
-
-
-window.addEventListener("scroll",() => {
-    if(scrollY > 0 ) {
-        $nav.classList.remove("active")
-        $btn_bar.src = "./assets/images/icon-menu.svg"  
-    }
-})
-
 
 
