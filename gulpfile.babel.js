@@ -1,21 +1,19 @@
-import gulp from "gulp";
-import babel from "gulp-babel";
-import htmlmin from "gulp-htmlmin";
-import terser from "gulp-terser";
-import postcss from "gulp-postcss";
-import imagemin from "gulp-imagemin";
-import { gifsicle, mozjpeg, optipng, svgo } from "gulp-imagemin";
+const gulp = require("gulp");
+const babel = require("gulp-babel");
+const htmlmin = require("gulp-htmlmin");
+const terser = require("gulp-terser");
+const postcss = require("gulp-postcss");
 
-import { init } from "browser-sync";
+const { init } = require("browser-sync");
 
 //css
-import autoprefixer from "autoprefixer";
-import cssnano from "cssnano";
-import concat from "gulp-concat";
+const autoprefixer = require("autoprefixer");
+const cssnano = require("cssnano");
+const concat = require("gulp-concat");
 
 const css = [autoprefixer(), cssnano()];
 
-gulp.task("html", () => {
+function html() {
   return gulp
     .src("./src/*.html")
 
@@ -27,9 +25,9 @@ gulp.task("html", () => {
     )
 
     .pipe(gulp.dest("./public/"));
-});
+}
 
-gulp.task("css", () => {
+function styles() {
   return gulp
     .src("./src/css/*.css")
 
@@ -37,9 +35,9 @@ gulp.task("css", () => {
     .pipe(postcss(css))
 
     .pipe(gulp.dest("./public/css/"));
-});
+}
 
-gulp.task("babel", () => {
+function traspilerJs() {
   return gulp
     .src("./src/js/*.js")
 
@@ -54,23 +52,16 @@ gulp.task("babel", () => {
     .pipe(terser())
 
     .pipe(gulp.dest("./public/js/"));
-});
+}
 
-gulp.task("img", () => {
-  return gulp
-    .src("./src/assets/images/*")
-
-    .pipe(imagemin([svgo(), optipng(), optipng(), mozjpeg(), gifsicle()]))
-
-    .pipe(gulp.dest("./public/assets/images/"));
-});
-
-gulp.task("default", () => {
+function build() {
   init({
     server: "./public",
   });
 
-  gulp.watch("./src/**/*.html", gulp.series("html"));
-  gulp.watch("./src/css/**/*.css", gulp.series("css"));
-  gulp.watch("./src/js/**/*.js", gulp.series("babel"));
-});
+  gulp.watch("./src/**/*.html", gulp.series(html));
+  gulp.watch("./src/css/**/*.css", gulp.series(styles));
+  gulp.watch("./src/js/**/*.js", gulp.series(traspilerJs));
+}
+
+exports.default = build;
