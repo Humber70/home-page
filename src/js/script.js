@@ -1,4 +1,5 @@
 import info from "../assets/data.json" assert { "type": "json" };
+
 const d = document;
 const $fragment = d.createDocumentFragment();
 const linksNames = ["Home", "New", "Popular", "Trending", "Categories"];
