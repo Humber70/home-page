@@ -1,19 +1,18 @@
 {
   "name": "home-page",
+  "private": "true",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "browserslist": [
-    "defaults",
-    "> 0.2% and not dead"
-  ],
   "scripts": {
-    "server": "gulp default"
+    "dev": "vite",
+    "preview": "vite preview",
+    "build": "vite build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "vite": "^6.0.5"
+    "vite": "6.0.5"
   }
 }
