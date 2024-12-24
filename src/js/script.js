@@ -1,4 +1,4 @@
-import info from "../assets/data.json" assert { "type": "json" };
+import info from "../mocks/data.json";
 
 const d = document;
 const $fragment = d.createDocumentFragment();
