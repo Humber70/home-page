@@ -25,9 +25,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // cambia la imagen segun el tamaño del screenX
 function detectSize() {
-  $img_home.src = "./assets/images/image-web-3-mobile.jpg";
+  $img_home.src = "/images/image-web-3-mobile.jpg";
   if (window.screenX < 600) {
-    $img_home.src = "./assets/images/image-web-3-desktop.jpg";
+    $img_home.src = "/images/image-web-3-desktop.jpg";
   }
 }
 
@@ -55,11 +55,11 @@ function createNav() {
 // mostrar navigation
 function navigation() {
   function showNavigation(e) {
-    e.target.setAttribute("src", "./assets/images/icon-menu.svg");
+    e.target.setAttribute("src", "/images/icon-menu.svg");
 
     if ($nav.classList.toggle("active")) {
       $nav.style.backgroundColor = "hsl(36, 100%, 99%);";
-      e.target.setAttribute("src", "./assets/images/icon-menu-close.svg");
+      e.target.setAttribute("src", "/images/icon-menu-close.svg");
     }
   }
   $btn_bar.addEventListener("click", showNavigation);
@@ -133,14 +133,14 @@ function getArticle(aside) {
 document.addEventListener("click", (e) => {
   if (e.target.matches("a")) {
     $nav.classList.remove("active");
-    $btn_bar.src = "./assets/images/icon-menu.svg";
+    $btn_bar.src = "/images/icon-menu.svg";
   }
 });
 
 window.addEventListener("scroll", () => {
   if (scrollY > 0) {
     $nav.classList.remove("active");
-    $btn_bar.src = "./assets/images/icon-menu.svg";
+    $btn_bar.src = "/images/icon-menu.svg";
   }
 });
 
