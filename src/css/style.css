@@ -1,6 +1,9 @@
+@import './global_styles.css';
+
 @font-face {
   font-family: "inter";
-  src: url("../assets/fonts/Inter-VariableFont_slnt,wght.ttf");
+  src: url("/fonts/Inter-VariableFont_slnt,wght.ttf");
+  font-display: swap;
 }
 h1 {
   font-size: 2.5em;
@@ -26,25 +29,6 @@ body {
 }
 
 /*header*/
-
-:root {
-  /*Colors*/
-  --color-primary-soft-orange: hsl(35, 77%, 62%);
-  --color-primary-soft-red: hsl(5, 85%, 63%);
-
-  --color-neutral-off-white: hsl(36, 100%, 99%);
-  --color-neutral-grayish-blue: hsl(233, 8%, 79%);
-  --color-neutral-dark-grayish-blue: hsl(236, 13%, 42%);
-  --color-neutral-very-dark-blue: hsl(240, 100%, 5%);
-
-  /*Typograpfhy*/
-
-  --font-size-body-paragraph: 15px;
-  --font-family: "inter";
-  --font-weight-400: 400;
-  --font-weight-700: 700;
-  --font-weight-800: 800;
-}
 .header {
   display: flex;
   align-items: center;
