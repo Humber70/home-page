@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "inter";
+  src: url("/fonts/Inter-VariableFont_slnt,wght.ttf");
+  font-display: swap;
+}
+
 :root {
 
   /* Colors */
@@ -15,4 +21,9 @@
   --font-weight-400: 400;
   --font-weight-700: 700;
   --font-weight-800: 800;
+}
+
+ol {
+  padding-left: 0px;
+  list-style: none;
 }
