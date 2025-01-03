@@ -1,4 +1,8 @@
 @import './global_styles.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 
 body {
   margin: 20px 20px auto;
