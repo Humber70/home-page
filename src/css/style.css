@@ -9,13 +9,6 @@ body {
   font-family: var(--font-family);
 }
 
-/*header*/
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 /*Main*/
 .main {
   width: 100%;
@@ -71,7 +64,9 @@ body {
   color: var(--color-neutral-grayish-blue);
 }
 
-
+.hidden {
+  display: none;
+}
 /*notices*/
 .notices {
   margin-top: 20px;
