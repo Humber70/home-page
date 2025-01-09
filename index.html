@@ -8,18 +8,28 @@
     <link rel="icon" href="/images/favicon-32x32.png" type="image/png"/>
     <title>Home Page</title>
   </head>
-  <body class="max-w-[1440px] lg:max-w-[1220px] xl:max-w-[1440px] px-4 mx-auto">
-    <header class="header">
-      <img src="/images/logo/logo.svg" alt="logo" class="logo" />
-      <img
-        src="/images/icons/icon-menu.svg"
-        alt="icon-menu"
-        class="bar-icon"
-      />
+  <body class="max-w-[1440px] sm:max-w-[1000px] lg:max-w-[1200px] px-4 mx-auto">
+    <header class="flex justify-between items-center">
 
-      <nav class="nav">
-        <ul class="list-links">
-          <!-- inserction list -->
+      <div class="flex items-center justify-between w-full py-5">
+        <img src="/images/logo/logo.svg" alt="logo"/>
+        <img
+          width="32"
+          src="/images/icons/icon-menu.svg"
+          alt="icon-menu"
+          class="btn-bar cursor-pointer"
+        />
+      </div>
+      
+      <div class="absolute right-0 top-0 bg-[transparent] z-1 flex flex-col justify-start h-full bg-[white] gap-10 pt-8 pl-3 w-[30%]" id="navigator">
+        <img
+        width="32"
+        src="/images/icons/icon-menu-close.svg"
+        alt="icon-menu-close"
+        class="btn-bar-close self-end cursor-pointer mx-4"
+      />
+      <nav class="nav h-auto">
+        <ul class="flex flex-col gap-4">
           <li class="list-item">
             <a href="#home" class="link">Home</a>
           </li>
@@ -37,6 +47,7 @@
           </li>
         </ul>
       </nav>
+      </div>
     </header>
 
     <main class="main" id="popular">
