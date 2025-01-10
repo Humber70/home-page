@@ -64,9 +64,6 @@ body {
   color: var(--color-neutral-grayish-blue);
 }
 
-.hidden {
-  display: none;
-}
 /*notices*/
 .notices {
   margin-top: 20px;
