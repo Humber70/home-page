@@ -21,7 +21,7 @@
         />
       </div>
       
-      <div class="absolute right-0 top-0 bg-[transparent] z-1 flex flex-col justify-start h-full bg-[white] gap-10 pt-8 pl-3 w-[30%]" id="navigator">
+      <div class="absolute right-0 top-0 bg-[transparent] z-1 flex flex-col justify-start h-full bg-[white] gap-10 pt-8 pl-3 w-[30%] hidden" id="navigator">
         <img
         width="32"
         src="/images/icons/icon-menu-close.svg"
@@ -53,11 +53,14 @@
     <main class="main" id="popular">
       <div class="home" id="home">
         <section class="main-home" id="categories">
-          <img
-            src="/images/image-web-3-mobile.jpg"
-            alt="home"
-            class="img-home"
-          />
+          <picture>
+            <source srcset="/images/image-web-3-desktop.jpg" media="(min-width: 700px)"/>
+            <img
+              src="/images/image-web-3-mobile.jpg"
+              alt="home"
+              class="img-home"
+            />
+          </picture>
           <div class="home-description">
             <div class="main-title">
               <h1>The Bright Future of Web 3.0?</h1>
@@ -111,6 +114,6 @@
       </section>
     </main>
 
-    <script src="./src/js/script.js" type="module"></script>
+    <script src="./src/js/barNavigator.js" type="module"></script>
   </body>
 </html>
