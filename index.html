@@ -17,36 +17,36 @@
           width="32"
           src="/images/icons/icon-menu.svg"
           alt="icon-menu"
-          class="btn-bar cursor-pointer"
+          class="btn-bar cursor-pointer lg:hidden"
         />
       </div>
       
-      <div class="absolute right-0 top-0 bg-[transparent] z-1 flex flex-col justify-start h-full bg-[white] gap-10 pt-8 pl-3 w-[30%] hidden" id="navigator">
+      <div class="hidden absolute right-0 top-0 bg-[transparent] z-1 flex flex-col justify-start h-full bg-[white] gap-10 pt-8 pl-3 w-[30%] lg:flex lg:pt-0 lg:relative lg:w-full lg:items-center" id="navigator">
         <img
         width="32"
         src="/images/icons/icon-menu-close.svg"
         alt="icon-menu-close"
-        class="btn-bar-close self-end cursor-pointer mx-4"
+        class="btn-bar-close self-end cursor-pointer mx-4 lg:hidden"
       />
-      <nav class="nav h-auto">
-        <ul class="flex flex-col gap-4">
-          <li class="list-item">
-            <a href="#home" class="link">Home</a>
-          </li>
-          <li class="list-item">
-            <a href="#new" class="link">New</a>
-          </li>
-          <li class="list-item">
-            <a href="#popular" class="link">Popular</a>
-          </li>
-          <li class="list-item">
-            <a href="#trending" class="link">Trending</a>
-          </li>
-          <li class="list-item">
-            <a href="#categories" class="link">Categories</a>
-          </li>
-        </ul>
-      </nav>
+        <nav class="">
+          <ul class="flex flex-col gap-4 lg:flex-row lg:gap-10">
+            <li class="list-item">
+              <a href="#home" class="link">Home</a>
+            </li>
+            <li class="list-item">
+              <a href="#new" class="link">New</a>
+            </li>
+            <li class="list-item">
+              <a href="#popular" class="link">Popular</a>
+            </li>
+            <li class="list-item">
+              <a href="#trending" class="link">Trending</a>
+            </li>
+            <li class="list-item">
+              <a href="#categories" class="link">Categories</a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
 
