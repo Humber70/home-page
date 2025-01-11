@@ -8,8 +8,8 @@
     <link rel="icon" href="/images/favicon-32x32.png" type="image/png"/>
     <title>Home Page</title>
   </head>
-  <body class="max-w-[1440px] sm:max-w-[1000px] lg:max-w-[1200px] px-4 mx-auto">
-    <header class="flex justify-between items-center">
+  <body class="max-w-[1440px] sm:max-w-[1000px] lg:max-w-[1200px] px-4 mx-auto bg-[--color-neutral-off-white]">
+    <header class="flex justify-between items-center py-3">
 
       <div class="flex items-center justify-between w-full py-5">
         <img src="/images/logo/logo.svg" alt="logo"/>
@@ -51,7 +51,7 @@
     </header>
 
     <main class="main" id="popular">
-      <div class="home" id="home">
+      <div class="flex flex-col lg:flex-row lg:gap-10" id="home">
         <section class="main-home" id="categories">
           <picture>
             <source srcset="/images/image-web-3-desktop.jpg" media="(min-width: 700px)"/>
@@ -61,17 +61,17 @@
               class="img-home"
             />
           </picture>
-          <div class="home-description">
-            <div class="main-title">
+          <div class="pt-5 flex flex-col  lg:flex-row">
+            <div>
               <h1 class="py-3 text-5xl font-[--font-weight-800] text-[--color-neutral-very-dark-blue]">The Bright Future of Web 3.0?</h1>
             </div>
             <article class="py-4">
-              <p class="text-[--color-neutral-grayish-blue] text-[--font-size-body-paragraph]">
+              <p class="text-[--color-neutral-dark-grayish-blue] font-[--font-size-body-paragraph]">
                 We dive into the next evolution of the web that claims to put
                 the power of the platforms back into the hands of the people.But
                 is it really fulfilling its promise?
               </p>
-              <button class="mt-6 bg-[--color-primary-soft-red] px-10 py-3 text-[--color-neutral-very-dark-blue] font-[500] tracking-[.4rem]">READ MORE</button>
+              <button class="mt-6 bg-[--color-primary-soft-red] px-10 py-3 text-[--color-neutral-very-dark-blue] font-[--font-weight-800] tracking-[.4rem]">READ MORE</button>
             </article>
           </div>
         </section>
@@ -79,38 +79,47 @@
           <h2 class="mb-4 text-3xl font-[--font-weight-800] text-[--color-primary-soft-orange]">New</h2>
           <ul class="flex flex-col gap-9">
             <li>
-              <h3 class="text-[--color-neutral-off-white] font-[--font-weight-800]">Reviving Retro PCs</h3>
+              <h3 class="text-[1.2rem] text-[--color-neutral-off-white] font-[--font-weight-800]">Reviving Retro PCs</h3>
               <p class="text-[--color-neutral-grayish-blue]">Will hydrogen-fueled cars ever catch up to EVs?</p>
             </li>
             <hr class="bg-[--color-neutral-grayish-blue] h-[0.5px] border-none">
             <li>
-              <h3 class="text-[--color-neutral-off-white] font-[--font-weight-800]">The Downsides of AI Artistry</h3>
+              <h3 class="text-[1.2rem] text-[--color-neutral-off-white] font-[--font-weight-800]">The Downsides of AI Artistry</h3>
               <p class="text-[--color-neutral-grayish-blue]">What are the possible adverse effects of on-demand AI image generation?</p>
             </li>
             <hr class="bg-[--color-neutral-grayish-blue] h-[0.5px] border-none">
             <li>
-              <h3 class="text-[--color-neutral-off-white] font-[--font-weight-800]">Is VC Funding Drying Up?</h3>
+              <h3 class="text-[1.2rem] text-[--color-neutral-off-white] font-[--font-weight-800]">Is VC Funding Drying Up?</h3>
               <p class="text-[--color-neutral-grayish-blue]">Private funding by VC firms is down 50% YOY. We take a look at what that means</p>
             </li>
           </ul>
         </aside>
       </div>
-      <section class="notices" id="trending">
-        <ol>
-          <li>
-            <img src="/images/image-retro-pcs.jpg" alt="retro-pcs">
-            <h3>Reviving Retro PCs</h3>
-            <p>What happens when old PCs are given modern upgrades?</p>
+      <section class="my-[3.5rem]" id="trending">
+        <ol class="flex flex-col gap-10 lg:flex-row">
+          <li class="flex flex-row gap-4">
+            <img src="/images/image-retro-pcs.jpg" alt="retro-pcs" class="object-cover w-[130px]"/>
+            <div class="flex flex-col justify-between">
+              <h3 class="font-[--font-weight-700] text-4xl text-[--color-primary-soft-red] ">01</h3>
+              <h3 class="text-[1.2rem] font-[--font-weight-800] text-[--color-neutral-very-dark-blue]">Reviving Retro PCs</h3>
+              <p class="leading-[2rem] text-[--color-neutral-dark-grayish-blue]">What happens when old PCs are given modern upgrades?</p>
+            </div>
           </li>
-          <li>
-            <img src="/images/image-top-laptops.jpg" alt="top-laptops">
-            <h3>Top 10 Laptops of 2022</h3>
-            <p>Our best picks for various needs and budgets?</p>
+          <li class="flex flex-row gap-4">
+            <img src="/images/image-top-laptops.jpg" alt="top-laptops" class="object-cover w-[130px]">
+            <div class="flex flex-col justify-between">
+              <h3 class="font-[--font-weight-700] text-4xl text-[--color-primary-soft-red]">02</h3>
+              <h3 class="text-[1.2rem] font-[--font-weight-800] text-[--color-neutral-very-dark-blue]">Top 10 Laptops of 2022</h3>
+              <p class="leading-[2rem] text-[--color-neutral-dark-grayish-blue]">Our best picks for various needs and budgets?</p>
+            </div>
           </li>
-          <li>
-            <img src="/images/image-gaming-growth.jpg" alt="growth-gaming">
-            <h3>The Growth of Gaming</h3>
-            <p>How the pandemic has sparked fresh opportunities</p>
+          <li class="flex flex-row gap-4">
+            <img src="/images/image-gaming-growth.jpg" alt="growth-gaming" class="object-cover w-[130px]">
+            <div class="flex flex-col justify-between">
+              <h3 class="font-[--font-weight-700] text-4xl text-[--color-primary-soft-red]">03</h3>
+              <h3 class="text-[1.2rem] font-[--font-weight-800] text-[--color-neutral-very-dark-blue]">The Growth of Gaming</h3>
+              <p class="leading-[2rem] text-[--color-neutral-dark-grayish-blue]">How the pandemic has sparked fresh opportunities</p>
+            </div>
           </li>
         </ol>
       </section>
