@@ -9,7 +9,7 @@
     <title>Home Page</title>
   </head>
   <body class="max-w-[1440px] sm:max-w-[1000px] lg:max-w-[1200px] px-4 mx-auto bg-[--color-neutral-off-white]">
-    <header class="flex justify-between items-center py-3">
+    <header class="flex justify-between items-center py-5">
 
       <div class="flex items-center justify-between w-full py-5">
         <img src="/images/logo/logo.svg" alt="logo"/>
@@ -28,7 +28,7 @@
         alt="icon-menu-close"
         class="btn-bar-close self-end cursor-pointer mx-4 lg:hidden"
       />
-        <nav class="">
+        <nav class="self-end">
           <ul class="flex flex-col gap-4 lg:flex-row lg:gap-10">
             <li class="list-item">
               <a href="#home" class="link">Home</a>
@@ -51,7 +51,7 @@
     </header>
 
     <main class="main" id="popular">
-      <div class="flex flex-col lg:flex-row lg:gap-10" id="home">
+      <div class="w-full flex flex-col lg:flex-row lg:gap-8" id="home">
         <section class="main-home" id="categories">
           <picture>
             <source srcset="/images/image-web-3-desktop.jpg" media="(min-width: 700px)"/>
@@ -61,11 +61,11 @@
               class="img-home"
             />
           </picture>
-          <div class="pt-5 flex flex-col  lg:flex-row">
-            <div>
-              <h1 class="py-3 text-5xl font-[--font-weight-800] text-[--color-neutral-very-dark-blue]">The Bright Future of Web 3.0?</h1>
+          <div class="pt-5 flex flex-col lg:flex-row lg:gap-10">
+            <div class="lg:w-[50%]">
+              <h1 class="py-3 text-6xl font-[--font-weight-800] text-[--color-neutral-very-dark-blue]">The Bright Future of Web 3.0?</h1>
             </div>
-            <article class="py-4">
+            <article class="py-4 lg:w-[50%]">
               <p class="text-[--color-neutral-dark-grayish-blue] font-[--font-size-body-paragraph]">
                 We dive into the next evolution of the web that claims to put
                 the power of the platforms back into the hands of the people.But
@@ -75,9 +75,9 @@
             </article>
           </div>
         </section>
-        <aside class="p-5 bg-[--color-neutral-very-dark-blue]" id="new">
-          <h2 class="mb-4 text-3xl font-[--font-weight-800] text-[--color-primary-soft-orange]">New</h2>
-          <ul class="flex flex-col gap-9">
+        <aside class="p-5 bg-[--color-neutral-very-dark-blue] lg:w-[80%]" id="new">
+          <ul class="flex flex-col pb-5 gap-10 h-full lg:justify-between lg:gap-0 lg:pb-3">
+            <h2 class="text-4xl font-[--font-weight-800] text-[--color-primary-soft-orange]">New</h2>
             <li>
               <h3 class="text-[1.2rem] text-[--color-neutral-off-white] font-[--font-weight-800]">Reviving Retro PCs</h3>
               <p class="text-[--color-neutral-grayish-blue]">Will hydrogen-fueled cars ever catch up to EVs?</p>
@@ -98,7 +98,7 @@
       <section class="my-[3.5rem]" id="trending">
         <ol class="flex flex-col gap-10 lg:flex-row">
           <li class="flex flex-row gap-4">
-            <img src="/images/image-retro-pcs.jpg" alt="retro-pcs" class="object-cover w-[130px]"/>
+              <img src="/images/image-retro-pcs.jpg" alt="retro-pcs" class="object-cover w-[110px]"/>
             <div class="flex flex-col justify-between">
               <h3 class="font-[--font-weight-700] text-4xl text-[--color-primary-soft-red] ">01</h3>
               <h3 class="text-[1.2rem] font-[--font-weight-800] text-[--color-neutral-very-dark-blue]">Reviving Retro PCs</h3>
@@ -106,7 +106,7 @@
             </div>
           </li>
           <li class="flex flex-row gap-4">
-            <img src="/images/image-top-laptops.jpg" alt="top-laptops" class="object-cover w-[130px]">
+            <img src="/images/image-top-laptops.jpg" alt="top-laptops" class="object-cover w-[110px]">
             <div class="flex flex-col justify-between">
               <h3 class="font-[--font-weight-700] text-4xl text-[--color-primary-soft-red]">02</h3>
               <h3 class="text-[1.2rem] font-[--font-weight-800] text-[--color-neutral-very-dark-blue]">Top 10 Laptops of 2022</h3>
@@ -114,7 +114,7 @@
             </div>
           </li>
           <li class="flex flex-row gap-4">
-            <img src="/images/image-gaming-growth.jpg" alt="growth-gaming" class="object-cover w-[130px]">
+            <img src="/images/image-gaming-growth.jpg" alt="growth-gaming" class="object-cover w-[110px]">
             <div class="flex flex-col justify-between">
               <h3 class="font-[--font-weight-700] text-4xl text-[--color-primary-soft-red]">03</h3>
               <h3 class="text-[1.2rem] font-[--font-weight-800] text-[--color-neutral-very-dark-blue]">The Growth of Gaming</h3>
