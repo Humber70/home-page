@@ -3,7 +3,7 @@
 This is a solution to the [News homepage challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/news-homepage-H6SWTa1MFl). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ### Link
-Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+Live Site URL: [Home Page](https://home-page-frontendmentor.netlify.app/)
 
 ## My process
 ### Built with
